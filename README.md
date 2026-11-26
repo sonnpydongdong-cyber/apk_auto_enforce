@@ -2,6 +2,16 @@ Usage: python jiagu.py xxx.apk
 
 效果：实现dex文件整体加密、隐藏
 
+### 部署本项目 Debug APK
+
+连接一台已启用 USB 调试并授权此电脑的 Android 设备，然后在仓库根目录运行：
+
+```sh
+./deploy.sh
+```
+
+脚本会构建并安装 `TuokeApk` 项目的 Debug APK。若连接了多台设备，可通过 `ANDROID_SERIAL=<设备序列号> ./deploy.sh` 指定目标。该项目的 Manifest 未声明启动器 Activity，因此脚本只安装 APK，不会启动应用。
+
 (1)想体验具体效果可以访问我开发的工具：http://01hackcode.com
 
 (2)加固原理，可以访问我写得一系列博客文章：
